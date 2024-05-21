@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color: #E9F2FB;
+}
+
+/* TODO INPUT FORM CSS */
+
+header
+{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3D4261;
+    color: white;
+}
+
+header h1
+{
+    font-size: 2.5rem;
+}
+
+#todo-form input
+{
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    width: 20rem;
+}
+
+#todo-form button
+{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF8E45;
+    color: white;
+}
+
+/* END OF TODO INPUT FORM CSS */
+
+
+/* TASKS STATS CSS */
+
+.stats
+{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.stats li
+{
+    margin: 20px;
+}
+
+.stats li span
+{
+    background-color: #3D4261;
+    padding: 6px;
+    border-radius: 7px 0 0 7px;
+    color: white;
+    font-size: 14px;
+}
+#remaining-tasks, #completed-tasks, #total-tasks{
+
+    background-color: #338CB7;
+    color: white;
+    border-radius: 0 7px 7px 0 ;
+}
+
+/* END OF TASKS STATS CSS */
+
+/* MAIN TASKS LIST CSS */
+
+.todos
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    list-style-type: none;
+
+}
+
+.todos li
+{
+    width: 30rem;
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todos li span
+{
+    padding: 3px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.todos li span:focus
+{
+    background-color: #E9F2FB;
+    outline: none;
+}
+
+.todos li span[contenteditable]:hover
+{
+    background-color: #E9F2FB;
+}
+.todos li div
+{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.todos li button 
+{
+    border: 0;
+    padding: .25rem;
+    display: grid;
+    place-content: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.todos li button svg
+{
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.todos li button svg path
+{
+    transition: all .3s ease-in-out;
+}
+
+.todos li button:hover svg path
+{
+    stroke: black;
+}
+
+.todos li button:active svg path
+{
+    transform: scale(0.8);
+}
+
+.todos li.complete
+{
+    background-color: #B1C3CB;
+    text-decoration: line-through;
+    color:#6f8892 ;
+
+}
+
+
+input[type='checkbox']
+{
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid black;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    transition: all .3s ease-in-out;
+   
+}
+
+input[type='checkbox']::before
+{
+    content: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.1 18.6L4 13.4L5.7 11L10.5 14.5L17.1 6L19.4 7.8L11.1 18.6Z' fill='%231C2E45' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
+    padding-top: 6px;
+    transform: scale(0);
+    transition: all .3s ease-in-out;
+}
+
+input[type='checkbox']:checked
+{
+    background-color: #B1C3CB;
+    border-color: #B1C3CB;
+}
+
+
+input[type='checkbox']:checked::before
+{
+    transform: scale(1);
+}
+
+
+
+
+
